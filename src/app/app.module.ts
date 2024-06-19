@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ColaboradorModule } from './colaborador/colaborador.module';
 import { FormsModule } from '@angular/forms';
+import { HomePainelModule } from './home-painel/home-painel.module';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        ColaboradorModule],
-    exports: [],
+        ColaboradorModule,
+        HomePainelModule
+    ],
+    exports: [
+        AppComponent
+    ],
     declarations: [
         AppComponent
     ],

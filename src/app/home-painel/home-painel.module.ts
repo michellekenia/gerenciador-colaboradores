@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ColaboradorComponent } from './colaborador.component';
+import { HomePainelComponent } from './home-painel.component';
 
 @NgModule({
   declarations: [
-    ColaboradorComponent],
+    HomePainelComponent
+  ],
   imports: [
     CommonModule
-  ], 
-
+  ],
   exports: [ 
-    ColaboradorComponent 
+    HomePainelComponent
   ]
 })
-export class ColaboradorModule { }
+export class HomePainelModule { }
