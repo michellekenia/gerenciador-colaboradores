@@ -4,13 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ColaboradorModule } from './colaborador/colaborador.module';
 import { FormsModule } from '@angular/forms';
 import { HomePainelModule } from './home-painel/home-painel.module';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         ColaboradorModule,
-        HomePainelModule
+        HomePainelModule, 
+        AppRoutingModule
     ],
     exports: [
         AppComponent
