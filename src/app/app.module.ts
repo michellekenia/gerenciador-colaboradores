@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
         FormsModule,
         ColaboradorModule,
         HomePainelModule, 
-        AppRoutingModule
+        AppRoutingModule, 
     ],
     exports: [
         AppComponent

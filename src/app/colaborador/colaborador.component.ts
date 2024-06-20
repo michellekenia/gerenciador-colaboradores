@@ -4,7 +4,8 @@ interface Colaboradores {
   id: number, 
   nome: string,
   cargo: string
- } 
+ }
+
 
 @Component({
   selector: 'app-colaborador',
@@ -15,16 +16,23 @@ interface Colaboradores {
 
 export class ColaboradorComponent {
 
-colaboradores: Colaboradores [] = [
-{ id: 1, nome:'Mariana', cargo: 'Programadora back-end' }, 
-{ id: 2, nome:'Odara', cargo: 'Programadora front-end' },
-{ id: 3, nome:'Kênia', cargo: 'Tech Lead' }
+nome = ''
+cargo = ''
 
+colaboradores: Colaboradores [] = [
+  { id: 1, nome:'Mariana', cargo: 'Programadora back-end' }, 
+  { id: 2, nome:'Odara', cargo: 'Programadora front-end' },
+  { id: 3, nome:'Kênia', cargo: 'Tech Lead' }
 ]
 
 trackByItem(index: number, item: Colaboradores): number {
   return item.id;
 }
+
+listarColaboradores(){
+  this.colaboradores
+}
+
 
 
 }

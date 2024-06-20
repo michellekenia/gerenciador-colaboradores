@@ -1,12 +1,33 @@
 <div class="colaborador">
     <p>Lista de colaboradores: </p>
 
+    <!-- <button (click)="[]">Para listar os colaboradores</button> -->
+
     <ul>
-        @for (colaborador of colaboradores; track $index) {
+      @for (colaborador of colaboradores; track $index) {
         <li>
-           Nome colaboradora: {{ colaborador.nome }}, 
-           cargo: {{ colaborador.cargo }}
+            Nome {{colaborador.nome}} colaboradora: , 
+            cargo: {{colaborador.cargo}}
         </li>
-        }
+      }
+    </ul>
+
+    
+    <div>
+
+      <p>Add um colaborador: </p>
+      <ul>
+        <input type="text" placeholder="name" [(ngModel)]="nome"/>
       </ul>
+
+      <ul>
+        <input type="text" placeholder="cargo" [(ngModel)]="cargo"/>
+      </ul>
+  
+    </div>
+   
+
+
 </div>
+
+   
