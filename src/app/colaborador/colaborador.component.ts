@@ -1,11 +1,6 @@
-import { Component } from '@angular/core';
-
-interface Colaboradores {
-  id: number, 
-  nome: string,
-  cargo: string
- }
-
+import { Component, Input, input } from '@angular/core';
+import { Colaborador } from './colaborador';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-colaborador',
@@ -13,26 +8,16 @@ interface Colaboradores {
   styleUrl: './colaborador.component.css'
 })
 
-
 export class ColaboradorComponent {
 
-nome = ''
-cargo = ''
+  constructor(private router: Router) { }
 
-colaboradores: Colaboradores [] = [
-  { id: 1, nome:'Mariana', cargo: 'Programadora back-end' }, 
-  { id: 2, nome:'Odara', cargo: 'Programadora front-end' },
-  { id: 3, nome:'Kênia', cargo: 'Tech Lead' }
-]
+  @Input() colaborador: Colaborador = {nome: '', cargo: ''}
 
-trackByItem(index: number, item: Colaboradores): number {
-  return item.id;
+  
+listarColaborador() {
+  this.router.navigate(['listar-colaborador'])
 }
-
-listarColaboradores(){
-  this.colaboradores
 }
 
 
-
-}

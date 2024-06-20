@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
 import { ColaboradorComponent } from './colaborador/colaborador.component';
-import { HomePainelComponent } from './home-painel/home-painel.component';
+import { ListarColaboradorComponent } from './listar-colaborador/listar-colaborador.component';
+
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home-painel', pathMatch: 'full' },
-    { path: 'home-painel', component: HomePainelComponent },
-    { path: 'colaborador', component: ColaboradorComponent }
+    { path: '', redirectTo: '/app-root', pathMatch: 'full' },
+    { path: 'colaborador', component: ColaboradorComponent },
+    { path: 'listar-colaborador', component: ListarColaboradorComponent }
+    
 ];

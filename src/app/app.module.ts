@@ -1,9 +1,9 @@
+import { ListarColaboradorComponent } from './listar-colaborador/listar-colaborador.component';
+import { ColaboradorComponent } from './colaborador/colaborador.component';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { ColaboradorModule } from './colaborador/colaborador.module';
 import { FormsModule } from '@angular/forms';
-import { HomePainelModule } from './home-painel/home-painel.module';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -11,15 +11,17 @@ import { AppRoutingModule } from './app-routing.module';
     imports: [
         BrowserModule,
         FormsModule,
-        ColaboradorModule,
-        HomePainelModule, 
         AppRoutingModule, 
     ],
     exports: [
-        AppComponent
+        AppComponent,
+        ColaboradorComponent,
+        ListarColaboradorComponent
     ],
     declarations: [
-        AppComponent
+        AppComponent, 
+        ColaboradorComponent,
+        ListarColaboradorComponent
     ],
     providers: [],
     

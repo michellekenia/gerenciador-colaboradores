@@ -8,17 +8,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-
-  
 constructor(
   private router: Router
 ){}
 
 
-  title = 'Meu gerenciador de colaboradores!';
-
 ngOnInit(){
 
+  
 }
 
 
@@ -26,8 +23,8 @@ ngOnInit(){
 
 
 
-// irParaColaborador(){
-//   this.router.navigate(['/colaborador'])
-// }
+irParaColaborador(){
+  this.router.navigate(['/colaborador'])
+}
   
 }
