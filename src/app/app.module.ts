@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { CriarColaboradorComponent } from './criar-colaborador/criar-colaborador.component';
 
 
 @NgModule({
@@ -16,12 +17,15 @@ import { AppRoutingModule } from './app-routing.module';
     exports: [
         AppComponent,
         ColaboradorComponent,
-        ListarColaboradorComponent
+        ListarColaboradorComponent,
+        CriarColaboradorComponent
+        
     ],
     declarations: [
         AppComponent, 
         ColaboradorComponent,
-        ListarColaboradorComponent
+        ListarColaboradorComponent,
+        CriarColaboradorComponent
     ],
     providers: [],
     

@@ -18,6 +18,13 @@ export class ColaboradorComponent {
 listarColaborador() {
   this.router.navigate(['listar-colaborador'])
 }
+
+criarColaborador() {
+  this.router.navigate(['criar-colaborador'])
+}
+
+
+
 }
 
 

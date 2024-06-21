@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
 import { ColaboradorComponent } from './colaborador/colaborador.component';
 import { ListarColaboradorComponent } from './listar-colaborador/listar-colaborador.component';
+import { CriarColaboradorComponent } from './criar-colaborador/criar-colaborador.component';
 
 
 
 export const routes: Routes = [
     { path: '', redirectTo: '/app-root', pathMatch: 'full' },
     { path: 'colaborador', component: ColaboradorComponent },
-    { path: 'listar-colaborador', component: ListarColaboradorComponent }
+    { path: 'listar-colaborador', component: ListarColaboradorComponent },
+    { path: 'criar-colaborador', component: CriarColaboradorComponent }
     
 ];
