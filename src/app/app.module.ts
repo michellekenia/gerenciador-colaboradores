@@ -8,13 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { CriarColaboradorComponent } from './criar-colaborador/criar-colaborador.component';
 import { AtualizarColaboradorComponent } from './atualizar-colaborador/atualizar-colaborador.component';
 import { DeletarColaboradorComponent } from './deletar-colaborador/deletar-colaborador.component';
+import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        AppRoutingModule, 
+        AppRoutingModule,
+        HttpClientModule
     ],
     exports: [
         AppComponent,
@@ -33,7 +36,7 @@ import { DeletarColaboradorComponent } from './deletar-colaborador/deletar-colab
         AtualizarColaboradorComponent,
         DeletarColaboradorComponent
     ],
-    providers: [],
+    providers: [ DataService ],
     
     bootstrap: [ AppComponent ]
 })
