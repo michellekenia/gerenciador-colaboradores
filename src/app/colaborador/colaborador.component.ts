@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Colaborador } from './colaborador';
 import { Router } from '@angular/router';
 
@@ -21,6 +21,14 @@ listarColaborador() {
 
 criarColaborador() {
   this.router.navigate(['criar-colaborador'])
+}
+
+atualizarColaborador(){
+  this.router.navigate(['atualizar-colaborador'])
+}
+
+deletarColaborador(){
+  this.router.navigate(['deletar-colaborador'])
 }
 
 

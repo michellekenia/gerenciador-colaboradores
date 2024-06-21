@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Colaborador } from '../colaborador/colaborador';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-colaborador',
@@ -8,6 +9,8 @@ import { Colaborador } from '../colaborador/colaborador';
 })
 export class ListarColaboradorComponent {
 
+  constructor(private router: Router) { }
+
 colaborador: Colaborador = {nome: '', cargo: ''}
 
 colaboradores: Colaborador [] = [
@@ -15,5 +18,14 @@ colaboradores: Colaborador [] = [
   {  nome:'Odara', cargo: 'Programadora front-end' },
   {  nome:'Kênia', cargo: 'Tech Lead' }
 ]
+
+atualizarColaborador(){
+  this.router.navigate(['atualizar-colaborador'])
+}
+
+deletarColaborador(){
+  this.router.navigate(['deletar-colaborador'])
+}
+
 
 }

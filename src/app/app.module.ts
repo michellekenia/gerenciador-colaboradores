@@ -6,6 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CriarColaboradorComponent } from './criar-colaborador/criar-colaborador.component';
+import { AtualizarColaboradorComponent } from './atualizar-colaborador/atualizar-colaborador.component';
+import { DeletarColaboradorComponent } from './deletar-colaborador/deletar-colaborador.component';
 
 
 @NgModule({
@@ -18,14 +20,18 @@ import { CriarColaboradorComponent } from './criar-colaborador/criar-colaborador
         AppComponent,
         ColaboradorComponent,
         ListarColaboradorComponent,
-        CriarColaboradorComponent
+        CriarColaboradorComponent, 
+        AtualizarColaboradorComponent,
+        DeletarColaboradorComponent
         
     ],
     declarations: [
         AppComponent, 
         ColaboradorComponent,
         ListarColaboradorComponent,
-        CriarColaboradorComponent
+        CriarColaboradorComponent, 
+        AtualizarColaboradorComponent,
+        DeletarColaboradorComponent
     ],
     providers: [],
     
