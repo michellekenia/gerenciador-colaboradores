@@ -3,12 +3,6 @@
     <p>Atualizar uma colaboradora: </p>
 
     <ul>
-        @for (colaborador of colaboradores ; track $index) {
-            <li>
-                Nome {{colaborador.nome}} colaboradora: , 
-                cargo: {{colaborador.cargo}}
-            </li>
-          }
           <input type="text" placeholder="nome" [(ngModel)]="colaborador.nome">
           <br>
           <br>
@@ -16,7 +10,7 @@
     </ul> 
 
     <ul>
-        <button (click)="atualizarColaborador()">Atualizar</button>
+        <button (click)="salvarColaborador()">Atualizar</button>
     </ul>
     
     

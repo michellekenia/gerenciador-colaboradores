@@ -1,6 +1,7 @@
+import { DataService } from './../data.service';
 import { Component } from '@angular/core';
 import { Colaborador } from '../colaborador/colaborador';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Data, Router } from '@angular/router';
 
 @Component({
   selector: 'app-atualizar-colaborador',
@@ -9,20 +10,68 @@ import { Router } from '@angular/router';
 })
 export class AtualizarColaboradorComponent {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    private dataService: DataService,
+    private route: ActivatedRoute) { }
 
-  colaborador: Colaborador = {nome: '', cargo: ''}
+    userId: number = 0
+    colaborador: Colaborador = {id: 0, nome: '', cargo: ''}
+    isUpdate: boolean = false
 
-  colaboradores: Colaborador [] = []
+    ngOnInit(){
 
-  atualizarColaborador(){
-    this.router.navigate(['listar-colaborador'])
+      this.route.params.subscribe(params => {
+        const id = +params['id']
+        if(id){
+          this.isUpdate = true
+          this.getColaborador(id)
+        }
+
+
+        // this.userId = params['id']
+        // this.getColaboradores(this.userId)
+
+        // console.log('Test ID:', this.userId);
+      })   
+    }
+
+
+  getColaborador(id: number): void{
+    const url = 'https://jsonplaceholder.typicode.com/posts/'+id
+    this.dataService.get<Colaborador>(url)
+    .subscribe((data: any)=> {
+      this.colaborador = {
+        nome: data.title, 
+        cargo: 'vazio',
+        id: data.id
+      } 
+      console.log("resultado", data)
+    })
+      
+    
+  }
+  
+  salvarColaborador(): void {
+    if(this.isUpdate) {
+      const url = 'https://jsonplaceholder.typicode.com/posts/' + this.colaborador.id;
+      const body = {
+        id: this.colaborador.id, 
+        title: this.colaborador.nome, 
+        body: 'vazio',
+        userId: 1
+      }
+
+      this.dataService.put<any>(url, body).subscribe(response => {
+        console.log("Resposta da atualização:", response);
+        this.router.navigate(['listar-colaborador'])
+      });
+    
+    }
   }
 
 
-  // trackByItem(index: string, item: Colaborador): string {
-  //   return item.nome;
-  // }
+
 
 
 }
