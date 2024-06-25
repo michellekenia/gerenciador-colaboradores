@@ -12,7 +12,7 @@ export const routes: Routes = [
     { path: 'colaborador', component: ColaboradorComponent },
     { path: 'listar-colaborador', component: ListarColaboradorComponent },
     { path: 'criar-colaborador', component: CriarColaboradorComponent },
-    { path: 'atualizar-colaborador', component: AtualizarColaboradorComponent },
-    { path: 'deletar-colaborador', component: DeletarColaboradorComponent }
+    { path: 'atualizar-colaborador/:id', component: AtualizarColaboradorComponent },
+    { path: 'deletar-colaborador/:id', component: DeletarColaboradorComponent }
     
 ];
