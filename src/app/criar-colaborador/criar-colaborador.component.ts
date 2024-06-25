@@ -1,6 +1,7 @@
+import { DataService } from './../data.service';
 import { Component } from '@angular/core';
 import { Colaborador } from '../colaborador/colaborador';
-import { Router } from '@angular/router';
+import { Data, Router } from '@angular/router';
 
 @Component({
   selector: 'app-criar-colaborador',
@@ -9,12 +10,25 @@ import { Router } from '@angular/router';
 })
 export class CriarColaboradorComponent {
 
-  constructor(private router: Router) { }
-
   colaborador: Colaborador = {nome: '', cargo: ''}
+  
+  constructor(
+    private router: Router,
+    private dataService: DataService
+  ) { }
 
-  salvarNaLista(){
-    this.router.navigate(['listar-colaborador'])
+  ngOnInit(){
+   
+  }
+ 
+  criarColaborador(){
+    const url = 'https://jsonplaceholder.typicode.com/posts'
+    this.dataService.post<Colaborador>(url, this.colaborador)
+    .subscribe((novoColaborador) => {
+      console.log('Colaborador criado com sucesso!', novoColaborador)
+      this.router.navigate(['listar-colaborador'])
+    })
+
   }
 
 }

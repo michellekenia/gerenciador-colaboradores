@@ -2,7 +2,7 @@
     <p>Criar uma colaboradora: </p>
 <ul>
     <input type="text" placeholder="nome" [(ngModel)]="colaborador.nome">
-    {{colaborador.nome}}
+    <!-- {{colaborador.nome}} -->
 
 </ul>  
 
@@ -11,11 +11,11 @@
     {{colaborador.cargo}}
 </ul> 
 <ul>
-    <button (click)="salvarNaLista()">salvar</button>
+    <button (click)="criarColaborador()">salvar</button>
 </ul>
 
-<ul>
-    <button (click)="salvarNaLista()">cancelar</button>
-</ul>
+<!-- <ul>
+    <button (click)="listarColaboradores()">cancelar</button>
+</ul> -->
 
 </div>
