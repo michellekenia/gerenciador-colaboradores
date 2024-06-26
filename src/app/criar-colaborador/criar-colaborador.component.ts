@@ -10,7 +10,7 @@ import { Data, Router } from '@angular/router';
 })
 export class CriarColaboradorComponent {
 
-  colaborador: Colaborador = {nome: '', cargo: ''}
+  colaborador: Colaborador = { nome: '', cargo: ''}
   
   constructor(
     private router: Router,
@@ -22,7 +22,7 @@ export class CriarColaboradorComponent {
   }
  
   criarColaborador(){
-    const url = 'https://jsonplaceholder.typicode.com/posts'
+    const url = 'http://localhost:3000/colaboradores'
     this.dataService.post<Colaborador>(url, this.colaborador)
     .subscribe((novoColaborador) => {
       console.log('Colaborador criado com sucesso!', novoColaborador)
