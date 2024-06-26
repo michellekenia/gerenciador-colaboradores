@@ -8,29 +8,4 @@
     </li>  
 </nav>
 
-<div class="colaborador">
-    <p>Lista de colaboradores: </p>
-    <ul>
-      @for (colaborador of colaboradores ; track $index) {
-        <li>
-            Nome {{colaborador.nome}}: , 
-            cargo: {{colaborador.cargo}}
-        </li>
-        <br> 
-        <!-- <ul>
-          <button (click)="atualizarColaborador()">atualizar</button>
-        </ul>
-        <br>
-        <ul>
-          <button (click)="deletarColaborador()">deletar</button>
-        </ul> -->
-      }
-    </ul>       
-</div>
-
-
-
-  
-
-
 <router-outlet></router-outlet>

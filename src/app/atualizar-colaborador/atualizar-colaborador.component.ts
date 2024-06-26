@@ -41,9 +41,7 @@ export class AtualizarColaboradorComponent {
         
       } 
       console.log("resultado get", data)
-    })
-      
-    
+    })    
   }
   
   salvarColaborador(): void {
@@ -52,19 +50,13 @@ export class AtualizarColaboradorComponent {
       const body = {
         id: this.colaborador.id, 
         nome: this.colaborador.nome,
-        cargo: this.colaborador.cargo,
+        cargo: this.colaborador.cargo
       } 
 
       this.dataService.put<any>(url, body).subscribe(response => {
         console.log("Resposta da atualização:", response);
         this.router.navigate(['listar-colaborador'])
-      });
-    
+      });   
     } 
   }
-
-
-
-
-
 }
