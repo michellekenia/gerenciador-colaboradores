@@ -1,15 +1,17 @@
-<div>
-    <p>Criar um colaborador: </p>
-<ul>
-    <input type="text" placeholder="nome" [(ngModel)]="colaborador.nome">
-
-</ul>  
-
-<ul>
-    <input type="text" placeholder="cargo" [(ngModel)]="colaborador.cargo">
-</ul> 
-<ul>
-    <button (click)="criarColaborador()">salvar</button>
-</ul>
-
+<div class="container mt-4">
+  <div class="colaborador">
+    <h3>Criar um Colaborador</h3>
+    <form>
+      <div class="mb-3">
+        <label for="inputNome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="inputNome" placeholder="Digite o nome" [(ngModel)]="colaborador.nome" name="nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="inputCargo" class="form-label">Cargo</label>
+        <input type="text" class="form-control" id="inputCargo" placeholder="Digite o cargo" [(ngModel)]="colaborador.cargo" name="cargo" required>
+      </div>
+      <button type="button" class="btn btn-primary me-2" (click)="criarColaborador()">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="voltar()">Voltar</button>
+    </form>
+  </div>
 </div>

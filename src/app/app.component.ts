@@ -1,25 +1,22 @@
-import { Router } from '@angular/router';
-import { DataService } from './data.service';
 import { Component } from '@angular/core';
 import { Colaborador } from './colaborador/colaborador';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
 
-colaboradores: Colaborador[] = []
 
-constructor(
-  private dataService: DataService,
-  private router: Router
+  constructor(
+    private router: Router,  
+  ) { }
 
-){}
-
-
-ngOnInit(){
-}
-
+  seguirMenu(): void {
+    this.router.navigate(['colaborador']);
+  }
+    
 }

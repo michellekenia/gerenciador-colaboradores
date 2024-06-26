@@ -32,6 +32,9 @@ deletarColaborador(){
 }
 
 
+voltar(): void {
+  this.router.navigate(['']);
+}
 
 }
 

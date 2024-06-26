@@ -1,24 +1,20 @@
-<div class="colaborador">
-      <p>Lista de colaboradores: </p>
-      <ul>
-        @for (colaborador of colaboradores ; track $index) {
-          <li>
-              Nome: {{colaborador.nome}}: , 
-              cargo: {{colaborador.cargo}}
-          </li>
-          <br> 
-          <ul>
-            <button  (click)="atualizarColaborador(colaborador.id!!)">atualizar</button>
-          </ul>
-          <br>
-          <ul>
-            <button (click)="deletarColaborador(colaborador.id!!)">deletar</button>
-          </ul>
-        }
-      </ul>       
+<div class="container mt-4">
+  <div class="colaborador">
+    <h3>Lista de Colaboradores</h3>
+    <ul class="list-group">
+      <li *ngFor="let colaborador of colaboradores; let i = index" class="list-group-item">
+        <div class="row">
+          <div class="col">
+            <p><strong>Nome:</strong> {{ colaborador.nome }}</p>
+            <p><strong>Cargo:</strong> {{ colaborador.cargo }}</p>
+          </div>
+          <div class="col-auto">            
+            <button (click)="atualizarColaborador(colaborador.id!!)" class="btn btn-warning btn-sm me-2">Atualizar</button>
+            <button (click)="deletarColaborador(colaborador.id!!)" class="btn btn-danger btn-sm me-2">Deletar</button>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
-
-
-
-    
-
+  <button (click)="voltar()" class="btn btn-secondary btn-sm mt-3">Voltar</button>
+</div>

@@ -31,4 +31,9 @@ export class CriarColaboradorComponent {
 
   }
 
+  voltar(): void {
+    this.router.navigate(['colaborador']);
+  }
+  
+
 }

@@ -1,14 +1,15 @@
-<div>
-    <p>Deletar um colaborador: </p>
-    <ul>
-        <input type="text" placeholder="nome" [(ngModel)]="colaborador.nome">
-        <br>
-        <br>
-        <input type="text" placeholder="cargo" [(ngModel)]="colaborador.cargo">  
-  </ul>
-  
-    <ul>
-        <button (click)="deletarColaborador()">Deletar</button>
-    </ul>
-    
+<div class="container mt-5">
+  <div *ngIf="isUpdate" class="card">
+    <div class="card-header">
+      <h2>Deletar Colaborador</h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Nome:</strong> {{ colaborador.nome }}</p>
+      <p><strong>Cargo:</strong> {{ colaborador.cargo }}</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-start">
+        <button (click)="deletarColaborador()" class="btn btn-danger btn-sm me-md-2">Deletar</button>
+        <button (click)="voltar()" class="btn btn-secondary btn-sm">Cancelar</button>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,13 +1,15 @@
-<div class="colaborador">
-  <div>
-    <ul>
-      <button (click)="listarColaborador()">Listar colaboradores</button>
-    </ul>
-
-    <ul>
-      <button (click)="criarColaborador()">Criar colaborador</button>
-    </ul>
-    
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3>{{ colaborador.nome }}</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Menu:</strong> {{ colaborador.cargo }}</p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button (click)="listarColaborador()" class="btn btn-primary">Listar Colaboradores</button>
+          <button (click)="criarColaborador()" class="btn btn-success">Criar Colaborador</button>
+        </div>
+      </div>
+      <button (click)="voltar()" class="btn btn-secondary btn-sm mt-3">Voltar</button>
+    </div>
   </div>
-<div>
-

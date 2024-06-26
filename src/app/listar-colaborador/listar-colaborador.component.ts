@@ -46,5 +46,9 @@ deletarColaborador(id:number){
   this.router.navigate(['deletar-colaborador',id])
 }
 
+voltar(): void {
+  this.router.navigate(['colaborador']);
+}
+
 
 }

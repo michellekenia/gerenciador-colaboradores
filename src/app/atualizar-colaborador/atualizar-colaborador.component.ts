@@ -58,5 +58,10 @@ export class AtualizarColaboradorComponent {
         this.router.navigate(['listar-colaborador'])
       });   
     } 
+    
+  }
+
+  voltar(): void {
+    this.router.navigate(['listar-colaborador']);
   }
 }

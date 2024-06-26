@@ -1,11 +1,14 @@
-<div class="colaborador">
-    <p>Olá, você está no gerenciador de colaboradores da empresa MN Códigos! Seja bem vinde! </p>
-</div>
+<div class="container mt-5">
+    <div class="text-center mb-4">
+      <h1>Gerenciador de Colaboradores</h1>
+      <p>Olá, você está no gerenciador de colaboradores da empresa MN Códigos! Seja bem-vinde!</p>
 
-<nav>
-    <li>
-        <a routerLink="/colaborador" routerLinkActive="active">Colaborador</a> 
-    </li>  
-</nav>
+   <div>
+    <button class="btn btn-primary" (click)="seguirMenu()">Menu de gerenciamento</button>
 
-<router-outlet></router-outlet>
+   </div>
+    <div class="mt-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
