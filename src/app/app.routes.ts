@@ -8,7 +8,6 @@ import { DeletarColaboradorComponent } from './deletar-colaborador/deletar-colab
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/app-root', pathMatch: 'full' },
     { path: 'colaborador', component: ColaboradorComponent },
     { path: 'listar-colaborador', component: ListarColaboradorComponent },
     { path: 'criar-colaborador', component: CriarColaboradorComponent },
