@@ -32,12 +32,12 @@ export class DeletarColaboradorComponent {
   }
 
   getColaborador(id: number): void {
-    const url = `https://jsonplaceholder.typicode.com/posts/${id}`
+    const url = 'http://localhost:3000/colaboradores/' + id
     this.dataService.get<Colaborador>(url)
       .subscribe((data: any) => {
         this.colaborador = {
-          nome: data.title,
-          cargo: 'vazio',
+          nome: data.nome,
+          cargo: data.cargo,
           id: data.id
         };
         console.log("Resultado da consulta:", data);
@@ -45,7 +45,7 @@ export class DeletarColaboradorComponent {
   }
 
   deletarColaborador(){
-    const url = `https://jsonplaceholder.typicode.com/posts/${this.colaborador.id}`
+    const url = 'http://localhost:3000/colaboradores' + this.colaborador.id
     this.dataService.delete<any>(url)
     .subscribe(() => {
       console.log('colaborador deletado com sucesso!')
@@ -53,7 +53,7 @@ export class DeletarColaboradorComponent {
     })
   }
 
-  cancelarDelecao(): void {
+  cancelarDelecao(): void {  
     this.router.navigate(['listar-colaborador']);
   }
   
