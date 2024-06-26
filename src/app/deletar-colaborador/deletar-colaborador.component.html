@@ -1,7 +1,14 @@
-<p>Colaborador deletado com sucesso!</p>
-
-<p>Lista de colaboradores atualizada: </p>
-
-<ul>
-    <button (click)="cancelarDelecao()">Listar colaboradores</button>
-</ul>
+<div>
+    <p>Deletar um colaborador: </p>
+    <ul>
+        <input type="text" placeholder="nome" [(ngModel)]="colaborador.nome">
+        <br>
+        <br>
+        <input type="text" placeholder="cargo" [(ngModel)]="colaborador.cargo">  
+  </ul>
+  
+    <ul>
+        <button (click)="deletarColaborador()">Deletar</button>
+    </ul>
+    
+</div>
