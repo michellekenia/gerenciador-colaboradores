@@ -20,20 +20,18 @@ export class ListarColaboradorComponent {
 
 colaborador: Colaborador = {nome: '', cargo: ''}
 
-colaboradores: Colaborador [] = [
-
-]
+colaboradores: Colaborador [] = []
 
 getColaboradores(){
-  const url = 'https://jsonplaceholder.typicode.com/posts'
+  const url = 'http://localhost:3000/colaboradores'
   this.dataService.get<Colaborador[]>(url)
   .subscribe((resposta: any[])=> {
     this.colaboradores = resposta.map(data => ({
-      nome: data.title, 
-      cargo: 'vazio',
+      nome: data.nome, 
+      cargo: data.cargo,
       id: data.id
     })) 
-    console.log("resultado", resposta)
+    console.log("resultado do GET", resposta)
   })
     
 }
@@ -45,7 +43,7 @@ atualizarColaborador(id: number){
 
 deletarColaborador(id:number){
   console.log(id)
-  this.router.navigate(['deletar-colaborador', id])
+  this.router.navigate(['deletar-colaborador',id])
 }
 
 
